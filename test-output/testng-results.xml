@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="35937" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:51 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="35937" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:51 IST">
+      <class name="bookingtestmethod.LoginTest">
+        <test-method status="PASS" signature="bookinglogin()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="bookinglogin" duration-ms="34656" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookinglogin -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="aftermethod" is-config="true" duration-ms="961" started-at="2022-01-18T21:02:50 IST" finished-at="2022-01-18T21:02:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bookinglogin status=SUCCESS method=LoginTest.bookinglogin()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="aftertest()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="aftertest" is-config="true" duration-ms="0" started-at="2022-01-18T21:02:51 IST" finished-at="2022-01-18T21:02:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- bookingtestmethod.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
