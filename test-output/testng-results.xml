@@ -1,28 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35937" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:51 IST">
+  <suite name="Default suite" duration-ms="37916" started-at="2022-01-21T16:03:46 IST" finished-at="2022-01-21T16:04:24 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35937" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:51 IST">
+    <test name="Default test" duration-ms="37916" started-at="2022-01-21T16:03:46 IST" finished-at="2022-01-21T16:04:24 IST">
       <class name="bookingtestmethod.LoginTest">
-        <test-method status="PASS" signature="bookinglogin()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="bookinglogin" duration-ms="34656" started-at="2022-01-18T21:02:15 IST" finished-at="2022-01-18T21:02:50 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:bookingtestmethod.LoginTest@38f116f6]" name="setup" is-config="true" duration-ms="1795" started-at="2022-01-21T16:03:47 IST" finished-at="2022-01-21T16:03:48 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookinglogin -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="aftermethod" is-config="true" duration-ms="961" started-at="2022-01-18T21:02:50 IST" finished-at="2022-01-18T21:02:51 IST">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="booking(java.util.HashMap)[pri:1, instance:bookingtestmethod.LoginTest@38f116f6]" name="booking" duration-ms="8641" started-at="2022-01-21T16:03:53 IST" data-provider="testdata" finished-at="2022-01-21T16:04:02 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=bookinglogin status=SUCCESS method=LoginTest.bookinglogin()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc] output={null}]]]>
+                <![CDATA[{date=2022-01-21}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- booking -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:bookingtestmethod.LoginTest@38f116f6]" name="aftermethod" is-config="true" duration-ms="8622" started-at="2022-01-21T16:04:02 IST" finished-at="2022-01-21T16:04:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=booking status=SUCCESS method=LoginTest.booking(java.util.HashMap)[pri:1, instance:bookingtestmethod.LoginTest@38f116f6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="aftertest()[pri:0, instance:bookingtestmethod.LoginTest@485e36bc]" name="aftertest" is-config="true" duration-ms="0" started-at="2022-01-18T21:02:51 IST" finished-at="2022-01-18T21:02:51 IST">
+        <test-method status="PASS" signature="facebook(java.util.HashMap)[pri:2, instance:bookingtestmethod.LoginTest@38f116f6]" name="facebook" duration-ms="9941" started-at="2022-01-21T16:04:11 IST" data-provider="testdata" finished-at="2022-01-21T16:04:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=12345678, last=rana, first=aish, email=test@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- facebook -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:bookingtestmethod.LoginTest@38f116f6]" name="aftermethod" is-config="true" duration-ms="247" started-at="2022-01-21T16:04:21 IST" finished-at="2022-01-21T16:04:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=facebook status=SUCCESS method=LoginTest.facebook(java.util.HashMap)[pri:2, instance:bookingtestmethod.LoginTest@38f116f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="aftertest()[pri:0, instance:bookingtestmethod.LoginTest@38f116f6]" name="aftertest" is-config="true" duration-ms="3229" started-at="2022-01-21T16:04:21 IST" finished-at="2022-01-21T16:04:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->

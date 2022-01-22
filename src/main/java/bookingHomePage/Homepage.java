@@ -1,6 +1,8 @@
 package bookingHomePage;
 
 import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,12 +64,30 @@ import org.openqa.selenium.support.PageFactory;
 	@FindBy(xpath="//a[text()='Create New Account']")
 	public WebElement createAccount;
 	
+	@FindBy(name="firstname")
+	public WebElement firstname;
+	
+	@FindBy(name="lastname")
+	public WebElement lastname;
+	
+	@FindBy(name="reg_email__")
+	public WebElement email;
+	
+	@FindBy(name="reg_passwd__")
+	public WebElement password;
+	
+	@FindBy(xpath="//div[@class='xp__dates-inner']")
+	public WebElement date;
 	
 	
+	public WebElement getCheckin(String date) {
+		
+		return driver.findElement(By.xpath(String.format("//td[@data-date='%s']", date)));
+		
+	}
 	
 	
-	
-	
+
 	
 	
 	

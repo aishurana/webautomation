@@ -6,9 +6,9 @@
       <class name="bookingtestmethod.LoginTest">
         <methods>
           <include name="aftermethod"/>
-          <include name="bookinglogin"/>
+          <include name="booking" invocation-numbers="0"/>
+          <include name="setup"/>
           <include name="aftertest"/>
-          <include name="facebook" invocation-numbers="0"/>
         </methods>
       </class> <!-- bookingtestmethod.LoginTest -->
     </classes>

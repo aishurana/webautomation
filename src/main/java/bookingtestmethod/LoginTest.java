@@ -28,47 +28,100 @@ public class LoginTest extends BaseClass {
 	 * This is a method to test a scenario of the booking.com
 	 * 
 	 */
-//	@DataProvider(name = "testdata")
-	//public Object[][] readData(Method m) throws Exception {
-		
-//	 Object[][] testData = ExcelUtils.getDataFromExcel(getProperty("excel"), "login",m.getName()); // Arguments are file name, sheet name
+	/*
+	 *  @DataProvider(name = "testdata") 
+	 *  public Object[][] readData() throws Exception {
+	 * 
+	 *  Object[][] testData = ExcelUtils.getDataFromExcel(getProperty("excel"),"login",m.getName()); // Arguments are file name, sheet name
+	 *   return testData;  }
+	 */
+	
+	   @DataProvider(name = "testdata") 
+	   public Object[][] readData(Method m) throws Exception {
+	  
+	   Object[][] testData = ExcelUtils.getDataFromExcel(getProperty("excel"),"data",m.getName()); // Arguments are file name, sheet name
+	   
+	        return testData;  
+	   }
 	 
-//	 return testData;
-//	}
 	
-//	@Test(dataProvider="testdata")
-//	public void facebook(HashMap<String,String> data) throws FileNotFoundException, IOException {
-       
-//		driver.get(getProperty("fb"));
-//	}
-	
-	@Test
-	public void bookinglogin()throws FileNotFoundException, IOException, InterruptedException  {
+	   @Test(dataProvider="testdata",priority=2) 
+	   public void facebook(HashMap<String,String> data) throws FileNotFoundException, IOException  {
+		   
+	   Logger = report.createTest("facebook create account");
+	  
+	   driver.get(getProperty("fb"));
+	   
+	   Logger.info("navigated to website"+ driver.getTitle());
+	   
+	   click(home.createAccount);
+	   
+	   waitForElement(home.firstname);
+	   
+	   setValue(home.firstname,data.get("first"));
+	   
+	   setValue(home.lastname,data.get("last"));
+	   
+	   setValue(home.email,data.get("email"));
+	   
+	   setValue(home.password,data.get("password"));
+	   
+	   }
+	 
+	@Test(dataProvider="testdata",priority=1)
+	public void booking(HashMap<String,String> data) throws FileNotFoundException, IOException, InterruptedException {
+		
+		Logger = report.createTest("Booking website checkin date");
 
 		driver.get(getProperty("prod"));
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-	//	System.out.println(first+" "+last);
+		Logger.info("navigated to website"+ driver.getTitle());
+		   
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		click(home.date);
+		click(home.getCheckin(data.get("date")));
 		
 		
-		  click(home.searchCity); 
-		  setValue(home.searchCity,"Hyderabad");
-		  Thread.sleep(2000); 
-		  waitForElement(home.searchCity);
-		  moveAndClick(home.cityName,home.cityName); 
-		  Thread.sleep(2000);
-		  click(home.checkin); 
-		  Thread.sleep(2000);
-		  moveAndClick(home.datein,home.datein);
-		  moveAndClick(home.dateout,home.dateout); 
-		  Thread.sleep(2000);
-		  click(home.adultIcon); 
-		  moveAndClick(home.clickbutton,home.clickbutton);
-		  Thread.sleep(2000); 
-		  moveAndClick(home.rooms,home.rooms); click(home.search);
-		  Thread.sleep(3000); 
-		  printElementsText(home.hotelNames);
-		  moveAndClick(home.availability,home.availability);
+		
+		
+		
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		 * click(home.searchCity); waitForElement(home.searchCity);
+		 * setValue(home.searchCity,data.get("Hyderabad")); Thread.sleep(2000);
+		 */
+			/*
+			 * Thread.sleep(2000); waitForElement(home.searchCity);
+			 * moveAndClick(home.cityName,home.cityName); Thread.sleep(2000);
+			 * click(home.checkin); Thread.sleep(2000);
+			 * moveAndClick(home.datein,home.datein);
+			 * moveAndClick(home.dateout,home.dateout); Thread.sleep(2000);
+			 * click(home.adultIcon); moveAndClick(home.clickbutton,home.clickbutton);
+			 * Thread.sleep(2000); moveAndClick(home.rooms,home.rooms); click(home.search);
+			 * Thread.sleep(3000);
+			 */
+		//  printElementsText(home.hotelNames);
+		//  moveAndClick(home.availability,home.availability);
 		 // switchToChildWindowCloseParent();
 	
 	}
